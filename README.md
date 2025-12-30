@@ -1,11 +1,13 @@
 # Agentic AI Design Patterns
 
-Welcome to my Agentic AI Design Patterns repository. I created this project to showcase the various "Agentic AI" design patterns, that has been popularized by [DeepLearning.AI](https://www.deeplearning.ai/), with real working demo apps or code examples on how to build autonomous, iterative, and collaborative agentic AI apps. I took help of **Google Anti Gravity** to generate some of these codes.
+Welcome to the **Agentic AI Design Patterns** repository. This project showcases various "Agentic AI" design patterns popularized by [DeepLearning.AI](https://www.deeplearning.ai/), featuring functional demos of autonomous, iterative, and collaborative agentic AI applications. The code in this repository was developed with the assistance of **Google AntiGravity**.
 
-This repo demonstrates the following core agentic AI design patterns:
+Instead of expecting an LLM to generate a perfect result in a single pass, these agentic patterns enable models to reason, utilize tools, critique their own outputs, and facilitate collaboration among specialized agents.
+
+This repository demonstrates the following core design patterns:
 
 1. **Reflection**
-2. **Tool Use (Function Calling)**
+2. **Tool Use (Function Calling)** (integrated into the demos below)
 3. **Planning**
 4. **Multi-Agent Collaboration**
 
@@ -13,52 +15,53 @@ This repo demonstrates the following core agentic AI design patterns:
 
 ### Prerequisites
 
-* Python 3.11+
-* Docker
-* [Ollama LLM](https://ollama.com/)
+* **Python 3.11+**
+* **Docker**
+* **[Ollama](https://ollama.com/)** (Required for local LLM inference)
 
 ### Installation
 
-#### Clone the repo:
+1. **Clone the repository:**
 
-```bash
-git clone https://github.com/shomec/agentic-ai-designpatterns.git
-cd agentic-ai-designpatterns
-```
+   ```bash
+   git clone https://github.com/shomec/agentic-ai-designpatterns.git
+   cd agentic-ai-designpatterns
+   ```
 
-#### Setup environment:
+2. **Run the Demos:**
 
-To run working demos of individual design patterns, cd into the corresponding directory and run docker compose to build and run the services:
+   To explore a pattern, navigate to its directory and use Docker Compose to build and run the application.
 
-* For **"reflection pattern"** demo:
-  ```bash
-  cd reflection
-  docker compose up --build
-  ```
+   * **Reflection Pattern**
+     ```bash
+     cd reflection
+     docker compose up --build
+     ```
 
-* For **"reason-and-act (ReAct) pattern"** demo:
-  ```bash
-  cd reason-and-act
-  docker compose up --build
-  ```
+   * **Reason and Act (ReAct) Pattern**
+     ```bash
+     cd reason-and-act
+     docker compose up --build
+     ```
 
-* For **"planning pattern"** demo:
-  ```bash
-  cd planning
-  docker compose up --build
-  ```
+   * **Planning Pattern**
+     ```bash
+     cd planning
+     docker compose up --build
+     ```
 
-* For **"multi-agent orchestration or collaboration pattern"** demo:
-  ```bash
-  cd multi-agent
-  docker compose up --build
-  ```
+   * **Multi-Agent Collaboration Pattern**
+     ```bash
+     cd multi-agent
+     docker compose up --build
+     ```
 
+   > **Note:** The **Tool Use** pattern is a fundamental capability demonstrated within the ReAct, Planning, and Multi-Agent demos.
 
-### Tech Stack
+## Tech Stack
 
-This repository utilizes the following frameworks and tools to implement these patterns:
+This project leverages the following technologies to implement these patterns:
 
-* **Ollama**: For running local LLMs (Llama 3.2).
-* **MCP Server** (DuckDuckGo): For providing real-time search capabilities via Docker.
-
+* **[Ollama](https://ollama.com/)**: Orchestrates local Large Language Models (specifically `llama3.2`).
+* **[Model Context Protocol (MCP)](https://modelcontextprotocol.io/)**: Provides standardized, containerized access to external tools (e.g., DuckDuckGo Search) within the Docker environment.
+* **Docker**: Ensures consistent and isolated execution environments for all services.
