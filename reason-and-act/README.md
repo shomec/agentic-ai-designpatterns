@@ -23,13 +23,13 @@ docker compose up --build
 ### What happens?
 1.  **Ollama** service starts.
 2.  **init-ollama** service waits for Ollama to be ready and pulls the `llama3.2` model.
-3.  **app** service runs the default query: "What is the Fibonacci number of 1?"
-    - It uses the ReAct agent to reason, potentially using the Calculator or Search tools.
-    - It prints the trace (Thought, Action, Observation) to the console.
+3.  **app** service runs the default query: "Research Apple's latest quarterly revenue and compare it to Google's and Microsoft's."
+    - It uses the ReAct agent to reason, calling the Search tool to find revenue data for both companies.
+    - It compares the findings and provides a final answer.
 
 ### Custom Query
 To run a specific query, you can override the command in `docker-compose.yml` or run:
 
 ```bash
-docker compose run app "Who is Albert Einstein?" --ollama-url http://ollama:11434
+docker compose run app "What is the stock price of Apple?" --ollama-url http://ollama:11434
 ```
