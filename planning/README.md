@@ -8,7 +8,7 @@ A **Planner Agent** breaks down a complex query into sequential steps, and an **
 - `main.py`: Orchestrator (CLI).
 - `planner.py`: Generates the step-by-step plan.
 - `executor.py`: Executes steps using tools and maintains context.
-- `tools.py`: Tools (DuckDuckGo Search, Calculator).
+- `tools.py`: Tools (DuckDuckGo MCP server, Calculator).
 - `llm.py`: Interface to Ollama.
 - `docker-compose.yml`: Runs the app + Ollama.
 

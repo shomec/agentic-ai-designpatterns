@@ -8,36 +8,11 @@ The application mimics an agent that generates an initial draft, reflects on it 
 - `main.py`: CLI entry point.
 - `workflow.py`: Logic for the reflection loop.
 - `agents.py`: Generator and Reflector agent implementations.
-- `llm.py`: Abstract LLM interface with `MockLLM` (default) and `OpenAILLM`.
+- `llm.py`: Interface to Ollama.
 - `prompts.py`: System prompts.
+- `docker-compose.yml`: Runs the app + Ollama.
 
-## Usage
-
-### 1. Run with Mock LLM (Default)
-Run the application without any API keys to see the pattern in action.
-
-```bash
-python3 reflection/main.py "Write a python script to calculate fibonacci"
-```
-
-### 2. Run with Ollama
-To use a local Ollama instance (default: `http://localhost:11434`), use the `--use-ollama` flag.
-
-```bash
-python3 reflection/main.py "Write a python script to calculate fibonacci" --use-ollama
-```
-
-You can also specify the model (default: `llama3`):
-
-```bash
-python3 reflection/main.py "Write a python script to calculate fibonacci" --use-ollama --model mistral
-```
-
-```bash
-python3 reflection/main.py "Write a python script to calculate fibonacci" --use-ollama --model mistral
-```
-
-### 3. Run with Docker Compose
+## Usage with Docker Compose
 To run the entire stack (Application + Ollama) using Docker Compose:
 
 ```bash

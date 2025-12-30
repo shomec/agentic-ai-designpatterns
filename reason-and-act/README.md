@@ -7,7 +7,7 @@ The agent receives a query, reasons about it, uses tools (like Search or Calcula
 
 - `main.py`: CLI Entry point.
 - `react_agent.py`: Implements the ReAct loop (Thought -> Action -> Observation).
-- `tools.py`: Contains tools (`Search` using DuckDuckGo and `Calculator`).
+- `tools.py`: Tools (DuckDuckGo MCP server, Calculator).
 - `llm.py`: Interface to Ollama.
 - `docker-compose.yml`: Runs the app + Ollama.
 
