@@ -8,8 +8,9 @@ This repository demonstrates the following core design patterns:
 
 1. **Reflection**
 2. **Tool Use (Function Calling)** (integrated into the demos below)
-3. **Planning**
-4. **Multi-Agent Collaboration**
+3. **Reason and Act (ReAct)**
+4. **Planning**
+5. **Multi-Agent Collaboration**
 
 ## Getting Started
 
@@ -62,6 +63,6 @@ This repository demonstrates the following core design patterns:
 
 This project leverages the following technologies to implement these patterns:
 
-* **[Ollama](https://ollama.com/)**: Orchestrates local Large Language Models (specifically `llama3.2`).
+* **[Ollama](https://ollama.com/)**: Orchestrates local Large Language Models (specifically `gemma3:1b`).
 * **[Model Context Protocol (MCP)](https://modelcontextprotocol.io/)**: Provides standardized, containerized access to external tools (e.g., DuckDuckGo Search) within the Docker environment.
 * **Docker**: Ensures consistent and isolated execution environments for all services.

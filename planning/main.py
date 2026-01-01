@@ -17,7 +17,7 @@ def main():
     args = parser.parse_args()
 
     print(f"Initializing Agents with Ollama at {args.ollama_url}")
-    llm = OllamaLLM(base_url=args.ollama_url, model="llama3.2")
+    llm = OllamaLLM(base_url=args.ollama_url, model="gemma3:1b")
     planner = PlannerAgent(llm)
     executor = ExecutorAgent(llm)
     

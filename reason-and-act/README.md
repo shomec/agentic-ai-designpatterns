@@ -23,7 +23,7 @@ docker compose up --build
 ### What happens?
 1.  **Ollama** service starts.
 2.  **init-ollama** service waits for Ollama to be ready and pulls the `llama3.2` model.
-3.  **app** service runs the default query: "Research Apple's latest quarterly revenue and compare it to Google's and Microsoft's."
+3.  **app** service runs the default query: "Research Apple's latest 2025 quarterly revenue and compare it to Google's and Microsoft's."
     - It uses the ReAct agent to reason, calling the Search tool to find revenue data for both companies.
     - It compares the findings and provides a final answer.
 

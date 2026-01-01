@@ -20,8 +20,8 @@ docker compose up --build
 ```
 
 ### What happens?
-1.  **Ollama** starts and pulls `llama3.2`.
-2.  **App** runs the default query: "What is the capital of France and what is its population?"
+1.  **Ollama** starts and pulls `gemma3:1b`.
+2.  **App** runs the default query: "What is the total population of the United States of America as of December 2025?"
 3.  **Phase 1 (Planning)**: The Planner agent outlines the steps.
 4.  **Phase 2 (Execution)**: The Executor agent performs each step, passing results to the next.
 

@@ -23,7 +23,7 @@ services:
     volumes:
       - ollama_data:/root/.ollama
     entrypoint: /bin/sh
-    command: "-c 'sleep 5; OLLAMA_HOST=ollama:11434 ollama pull llama3.2'"
+    command: "-c 'sleep 5; OLLAMA_HOST=ollama:11434 ollama pull gemma3:1b'"
     depends_on:
       - ollama
 

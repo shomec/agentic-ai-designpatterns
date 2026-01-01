@@ -7,7 +7,7 @@ services:
       - .:/planning
       - /var/run/docker.sock:/var/run/docker.sock
     # Default example query
-    command: [ "What is the capital of France and what is its population?", "--ollama-url", "http://ollama:11434" ]
+    command: [ "What is the total population of the United States of America as of December 2025?", "--ollama-url", "http://ollama:11434" ]
     depends_on:
       init-ollama:
         condition: service_completed_successfully
@@ -24,7 +24,7 @@ services:
     volumes:
       - ollama_data:/root/.ollama
     entrypoint: /bin/sh
-    command: "-c 'sleep 5; OLLAMA_HOST=ollama:11434 ollama pull llama3.2'"
+    command: "-c 'sleep 5; OLLAMA_HOST=ollama:11434 ollama pull gemma3:1b'"
     depends_on:
       - ollama
 

@@ -73,7 +73,13 @@ class OllamaLLM(AbstractLLM):
         payload = {
             "model": self.model,
             "prompt": prompt,
-            "stream": False
+            "stream": False,
+            "options": {
+                "temperature": 0.5,
+                "repeat_penalty": 1.1,
+                "top_p": 0.9,
+                "top_k": 40
+            }
         }
         
         try:
@@ -81,7 +87,7 @@ class OllamaLLM(AbstractLLM):
             req = urllib.request.Request(url, data=data, headers={"Content-Type": "application/json"})
             with urllib.request.urlopen(req) as response:
                 response_data = json.loads(response.read().decode("utf-8"))
-                return response_data.get("response", "")
+                return response_data.get("response", "").strip()
         except urllib.error.URLError as e:
             return f"Error communicating with Ollama: {e}. Ensure Ollama is running at {self.base_url}"
 

@@ -6,7 +6,7 @@ services:
     volumes:
       - .:/reason-and-act
       - /var/run/docker.sock:/var/run/docker.sock
-    command: [ "Research Apple's latest quarterly revenue and compare it to Google's and Microsoft's.", "--ollama-url", "http://ollama:11434" ]
+    command: [ "Research Apple's latest 2025 quarterly revenue and compare it to Google's and Microsoft's.", "--ollama-url", "http://ollama:11434" ]
     depends_on:
       init-ollama:
         condition: service_completed_successfully

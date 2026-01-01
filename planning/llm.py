@@ -7,7 +7,7 @@ class OllamaLLM:
     Implementation for local Ollama API.
     Defaults to http://localhost:11434
     """
-    def __init__(self, model="llama3.2", base_url="http://localhost:11434"):
+    def __init__(self, model="gemma3:1b", base_url="http://localhost:11434"):
         self.model = model
         self.base_url = base_url
 
@@ -17,6 +17,12 @@ class OllamaLLM:
             "model": self.model,
             "prompt": prompt,
             "stream": False,
+            "options": {
+                "temperature": 0.5,
+                "repeat_penalty": 1.1,
+                "top_p": 0.9,
+                "top_k": 40
+            }
         }
         if stop:
             payload["stop"] = stop
